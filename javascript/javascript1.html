@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+	<head><title>javascript1</title></head>
+	<h1>javascript1</h1>
+<body>
+
+	<h1> JavaScript 1 </h1>
+	<p id="script1"> This is my first JavaScript! </p>
+	<button type="button" onclick="newFunction()"> Click here </button>
+
+	<h1>JS + CSS </h1>
+	<p id="styleChange1">JS can do style too!</p>
+	<button type="button"onclick="styleChange1()">Click here</button>
+
+	<h1>one more time</h1>
+	<p id="styleChange2">something new</p>
+	<button type="button" onclick="styleChange2()">Click here</button>
+
+	<h2>JavaScript</h2>
+	<p id="change0">This is for JS HW.</p>
+	<button type="button" onclick="change0()"> This is a title.</button>
+
+	<h2>Do you think this is not very hard? </h2>
+	<p id="change1"> Hard or not? </p>
+	<button type="button" onclick="change1()"> Not very hard. But I can not remember the words sadly.</button>
+
+	<h2>What programming language do you think it is hard?</h2>
+	<p id="change2"> I will tell you the truth.</p>
+	<button type="button" onclick="change2()">Good question! Click here and you will know it.</button>
+
+
+	<script>
+	function newFunction() {
+		document.getElementById("script1").innerHTML = "It worked!";
+	}
+
+	function styleChange1() {
+		var x = document.getElementById("styleChange1");
+		x.style.fontSize = "25px";
+		x.style.color = "red";
+	}
+
+	function styleChange2() {
+		var x = document.getElementById("styleChange2");
+		x.style.fontSize = "25px";
+		x.style.color="red";
+		x.style.backgroundColor="green";
+	}
+
+	function change0() {
+		var x=document.getElementById("change0");
+		x.style.fontSize="30px";
+		x.style.color="grey";
+		x.style.backgroundColor="black";
+	}
+
+	function change1() {
+		var x=document.getElementById("change1");
+		x.style.fontWeight="bold";
+		x.style.fontSize="60px";
+		x.style.color="green";
+		x.innerHTML = "Surprise!";
+	}
+
+	function change2() {
+		var x=document.getElementById("change2");
+		x.style.color="orange";
+		x.style.fontWeight="bold";
+		x.innerHTML="JAVA";
+	}
+
+	</script>
+</body>
+</html>
