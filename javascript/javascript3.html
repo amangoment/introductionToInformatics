@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+	<head><title> javascript3 </title></head>
+
+<body>
+	<h1> javascript3 </h1>
+
+	<p> Please enter a non-negative number. </p>
+	<input type="text"id="max_number"/>
+	<input type="button"onClick="count_it()"value="Count!"/>
+	</br>
+	<span id="counter"></span>
+
+	<script>
+	function count_it()
+	{
+		var max_num = document.getElementById("max_number").value;
+		var numbers = "";
+		for (var i = 1; i <= max_num; i++){
+			if((i % 2) == 0) {
+				numbers += String(i) + "<br>"
+			}
+			else {
+				numbers += String(i) + "";
+			}
+		}
+	document.getElementById("counter").innerHTML = numbers;
+	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+	<head><title> javascript4 </title></head>
+
+<body>
+	<h1> Rock, Paper, Scissors Game </h1>
+	<input type="image" src="images/rock.jpg" onclick="rock_choice()" />
+	<input type="image" src="images/paper.jpg" onclick="paper_choice()" />
+	<input type="image" src="images/scissors.jpg" onclick="scissors_choice()" />
+
+	<p id="test"> </p>
+
+	<script>
+	function rock_choice() {
+		test = document.getElementById("test");
+		var number = Math.floor(Math.random()*3 + 1);
+		if (number == 1) {
+			test.innerHTML = "<h1>You:</h1><img src='images/rock.jpg'><h1>Computer:</h1>img src='images/rock.jpg'><h1>Tie</h1>";
+		} else if (number == 2) {
+			test.innerHTML = "<h1>You:</h1><img src='images/rock.jpg'><h1>Computer:</h1><img src='images/paper.jpg'><h1>Lose</h1>";
+		} else {
+			test.innerHTML = "<h1>You:</h1><img src='images/rock.jpg'><h1>Computer:</h1><img src='images/scissors.jpg'><h1>Win</h1>";
+		}
+	}
+
+	function paper_choice() {
+		test = document.getElementById("test");
+		var number = Math.floor(Math.random()*3 + 1);
+		if (number == 1) {
+			test.innerHTML = "<h1>You:</h1><img src='images/paper.jpg'><h1>Computer:</h1><img src='images/rock.jpg'><h1>Win</h1>";
+		} else if (number == 2) {
+			test.innerHTML = "<h1>You:</h1><img src='images/paper.jpg'><h1>Computer:</h1><img src='images/paper.jpg'><h1>Tie</h1>";
+		} else {
+			test.innerHTML = "<h1>You:</h1><img src='images/paper.jpg'><h1>Computer:</h1><img src='images/scissors.jpg'><h1>Lose</h1>";
+		}
+	}
+
+	function scissors_choice() {
+		test = document.getElementById("test");
+		var number = Math.floor(Math.random()*3 + 1);
+		if (number == 1) {
+			test.innerHTML = "<h1>You:</h1><img src='images/scissors.jpg'><h1>Computer:</h1><img src='images/rock.jpg'><h1>Lose</h1>";
+		} else if (number == 2) {
+			test.innerHTML = "<h1>You:</h1><img src='images/scissors.jpg'><h1>Computer:</h1><img src='images/paper.jpg'><h1>Win</h1>";
+		} else {
+			test.innerHTML = "<h1>You:</h1><img src='images/scissors.jpg'><h1>Computer:</h1><img src='images/scissors.jpg'><h1>Tie</h1>";
+		}
+	}
+	</script>
+</body>
+</html>

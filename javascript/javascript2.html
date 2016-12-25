@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+	<head><title> javascript2 </title></head>
+	
+<body>
+	<h1>javascript2</h1>
+	<img id="myImage" onclick="changeImage()" src="images/bulboff.png">
+	<p>click the lightbulb to turn it on/off.</p>
+	
+	<img id="newImage" onclick="changeImg()" src="images/house1.jpg">
+	<p>click the house to change.</p>
+	
+	<p>Please input a number between 1 and 10;</p>
+	<input id="num" type="number">
+	<button type="button" onclick="checkNumber()">submit</button>
+	<p id="script1"></p>
+
+	<script>
+	function changeImage() {
+		var image = document.getElementById('myImage');
+		if (image.src.match("bulbon")) {
+			image.src = "images/bulboff.png";
+		} else {
+			image.src = "images/bulbon.png";
+		}
+	}
+	
+	function changeImg() {
+		var image = document.getElementById('newImage');
+		if (image.src.match("house1")) {
+			image.src = "images/house2.jpg";
+		} else {
+			image.src = "images/house1.jpg";
+		}
+	}
+	
+	function checkNumber() {
+		var x, text;
+		x = document.getElementById("num").value;
+		if (isNaN(x) || x < 1 || x > 10) {
+				text = "Input not valid";
+		}
+		else {
+			text = "Input Accepted";
+			changeImage();
+		}
+		document.getElementById("script1").innerHTML = text;
+		
+	}
+	
+	</script>
+	
+	</body>
+
